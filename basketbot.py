@@ -23,7 +23,7 @@ for event in longpoll.listen():
             count = int(rm[12:])
             i = 0
             people = []
-            send_message(dima, "Набор на тренировку начался")
+            
             send_message(lesha, "Набор на тренировку начался")
         if rm == "список":
             itog1 = ""
@@ -56,6 +56,5 @@ for event in longpoll.listen():
                     for i in range(len(people)):
                         itog += '{}. '.format(i + 1) + people[a] + "\n"
                         a += 1
-                    if i == (count - 1): 
-                        send_message(dima, itog)
+                    if i == (count - 1):
                         send_message(lesha, itog)
