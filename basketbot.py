@@ -14,7 +14,7 @@ longpoll = VkLongPoll(authorize)
 
 for event in longpoll.listen():
     if event.type == VkEventType.MESSAGE_NEW and event.to_me and event.text:
-        ed = 232515926
+        ed = 144915961
         lesha = 560170062
         received_message = event.text
         rm = received_message.lower()
@@ -23,7 +23,7 @@ for event in longpoll.listen():
             count = int(rm[12:])
             i = 0
             people = []
-            send_message(dima, "Набор на тренировку начался")            
+            send_message(ed, "Набор на тренировку начался")            
             send_message(lesha, "Набор на тренировку начался")
         if rm == "список":
             itog1 = ""
