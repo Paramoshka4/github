@@ -14,7 +14,7 @@ longpoll = VkLongPoll(authorize)
 
 for event in longpoll.listen():
     if event.type == VkEventType.MESSAGE_NEW and event.to_me and event.text:
-        dima = 232515926
+        dima = 144915961
         lesha = 560170062
         received_message = event.text
         rm = received_message.lower()
