@@ -45,7 +45,7 @@ for event in longpoll.listen():
                 else:
                     i += 1
             if i == count:
-                send_message(sender, "⚠ Упс...\n\n• Набор на ДАННУЮ тренировку закончен, мест больше нет!\n\n✅ Следите за информацией о новых тренировках в группе секции: vk.com/ssk_alliance_volley")
+                send_message(sender, "⚠ Упс...\n\n• Набор на ДАННУЮ тренировку закончен, мест больше нет!\n\n✅ Следите за информацией о новых тренировках в группе секции: vk.com/basketball_in_mirea")
                 false = 1
             if false != 1:
                 if i == len(people):
