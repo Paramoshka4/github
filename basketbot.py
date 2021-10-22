@@ -4,9 +4,7 @@ from vk_api.utils import get_random_id
 
 def send_message(sender, message):
     authorize.method('messages.send', {'user_id': sender, 'message': message, 'random_id': get_random_id()})
-#https://vk.com/kakoitomamba стас 229459286
-#https://vk.com/dssemiryakov дима 232515926
-#https://vk.com/turkish_giant тим 472247625
+
 #last = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 people = []
 
@@ -17,7 +15,6 @@ longpoll = VkLongPoll(authorize)
 for event in longpoll.listen():
     if event.type == VkEventType.MESSAGE_NEW and event.to_me and event.text:
         nikita = 320331416
-        lesha = 560170062
         tim = 472247625
         dima = 232515926
         stas = 229459286
@@ -29,7 +26,6 @@ for event in longpoll.listen():
             i = 0
             people = []
             send_message(nikita, "Набор на тренировку начался")            
-            send_message(lesha, "Набор на тренировку начался")
             send_message(dima, "Набор на тренировку начался")
             send_message(tim, "Набор на тренировку начался")
             send_message(stas, "Набор на тренировку начался")
@@ -40,13 +36,11 @@ for event in longpoll.listen():
                 itog1 += '{}. '.format(a1 + 1) + people[a1] + "\n"
                 a1 += 1
             if itog != "":
-                send_message(lesha, itog1)
                 send_message(dima, itog1)
                 send_message(tim, itog1)
                 send_message(nikita, itog1)
                 send_message(stas, itog1)
             else:
-                send_message(lesha, "Список пуст")
                 send_message(dima, "Список пуст")
                 send_message(tim, "Список пуст")
                 send_message(nikita, "Список пуст")
@@ -73,7 +67,6 @@ for event in longpoll.listen():
                         itog += '{}. '.format(i + 1) + people[a] + "\n"
                         a += 1
                     if i == (count - 1):
-                        send_message(lesha, itog)
                         send_message(dima, itog)
                         send_message(tim, itog)
                         send_message(nikita, itog)
